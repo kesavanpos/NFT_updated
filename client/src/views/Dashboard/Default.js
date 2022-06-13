@@ -81,7 +81,7 @@ export default function Default() {
         </Box>        
       </Grid>
       <Grid
-        templateColumns={{ sm: "1fr", lg: "1.3fr 1.7fr" }}
+        templateColumns={{ sm: "1fr", lg: "1.7fr 1.3fr" }}
         gap="24px"
         mb={{ lg: "26px" }}
       >
