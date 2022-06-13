@@ -133,7 +133,7 @@ export default function Dashboard(props) {
       >
         <Sidebar
           routes={routes}
-          logoText={"PURITY UI DASHBOARD PRO"}
+          logoText={"NFT App"}
           display="none"
           sidebarVariant={sidebarVariant}
           {...rest}
@@ -148,7 +148,7 @@ export default function Dashboard(props) {
           <Portal>
             <AdminNavbar
               onOpen={onOpen}
-              logoText={"PURITY UI DASHBOARD PRO"}
+              logoText={"NFT App"}
               brandText={getActiveRoute(routes)}
               secondary={getActiveNavbar(routes)}
               fixed={fixed}
@@ -167,10 +167,11 @@ export default function Dashboard(props) {
             </PanelContent>
           ) : null}
           <Footer />
+          
           <Portal>
             <FixedPlugin fixed={fixed} onOpen={onOpen} />
           </Portal>
-          <Configurator
+           <Configurator
             secondary={getActiveNavbar(routes)}
             isOpen={isOpen}
             onClose={onClose}

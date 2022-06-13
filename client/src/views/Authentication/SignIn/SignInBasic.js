@@ -31,7 +31,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 // Assets
-import basic from "assets/img/basic-auth.png";
+import basic from "../../../assets/img/basic-auth.png";
+
 import React from "react";
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
 

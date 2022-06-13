@@ -15,7 +15,7 @@ function Maps() {
     { country: "mx", value: 127318112 }, // mexico
   ];
 
-  return (    
+  return (
     <div className="App">
       <WorldMap
         color="red"
