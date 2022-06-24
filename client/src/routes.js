@@ -60,6 +60,7 @@ import AboutUs from "./views/Dashboard/Aboutus";
 // import Widgets from "views/Pages/Widgets.js";
 import MarketPlace from "./views/Dashboard/Marketplace";
 import MapHome from "./views/Dashboard/MapHome";
+import NFTMap from "./views/Dashboard/NFTMap";
 
 
 
@@ -81,6 +82,12 @@ const dashRoutes = [
         name: "Map",
         path: "/dashboard/HomeMap",
         component: MapHome,
+        layout: "/admin",
+      },
+      {
+        name: "NFTMap",
+        path: "/dashboard/HomeMap",
+        component: NFTMap,
         layout: "/admin",
       },
       {
