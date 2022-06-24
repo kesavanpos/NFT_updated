@@ -59,6 +59,7 @@ import AboutUs from "./views/Dashboard/Aboutus";
 // import Reports from "views/Pages/Users/Reports.js";
 // import Widgets from "views/Pages/Widgets.js";
 import MarketPlace from "./views/Dashboard/Marketplace";
+import MapHome from "./views/Dashboard/MapHome";
 
 
 
@@ -74,6 +75,12 @@ const dashRoutes = [
         name: "Home",
         path: "/dashboard/default",
         component: Default,
+        layout: "/admin",
+      },
+      {
+        name: "Map",
+        path: "/dashboard/HomeMap",
+        component: MapHome,
         layout: "/admin",
       },
       {

@@ -20,6 +20,7 @@ import {
   Thead,
   Tr,
   useColorModeValue,
+  Button
 } from "@chakra-ui/react";
 // Custom components
 import Card from "../../components/Card/Card.js";
@@ -30,6 +31,9 @@ import LineChart from "../../components/Charts/LineChart";
 import Globe from "../../components/Globe/Globe";
 import IconBox from "../../components/Icons/IconBox";
 import Maps from "../../components/Maps/Map"
+
+import { Link } from "react-router-dom";
+
 // Custom icons
 import {
   CartIcon,
@@ -52,6 +56,8 @@ export default function Default() {
   const iconTeal = useColorModeValue("teal.300", "teal.300");
   const iconBoxInside = useColorModeValue("white", "white");
   const textColor = useColorModeValue("gray.700", "white");
+  
+  
   return (
     <Flex flexDirection="column" pt={{ base: "120px", md: "75px" }}>
       <Text
@@ -89,19 +95,24 @@ export default function Default() {
           <CardHeader mb="20px" ps="22px">
             <Flex direction="column" alignSelf="flex-start">
               <Text fontSize="lg" color={textColor} fontWeight="bold" mb="6px">
-                Sales Overview
+                Block Chain Tech
               </Text>
-              <Text fontSize="sm" fontWeight="medium" color="gray.400">
-                <Text as="span" color="green.400" fontWeight="bold">
-                  (+5%) more
-                </Text>{" "}
-                in 2021
-              </Text>
+              <Button
+                    type='submit'
+                    bg='teal.300'
+                    w='50%'
+                    p='8px 32px'
+                    mb={5}
+                    _hover='teal.300'
+                    color='white'
+                    fontSize='xs'
+                    onClick={() => { window.location.href="#/admin/dashboard/HomeMap"}}         
+                    >
+                    Navigate Map
+                  </Button>
             </Flex>
           </CardHeader>
-          <Box w="100%" h={{ sm: "600px" }} ps="16px">
-            <Maps/>            
-          </Box>
+          
         </Card>
       </Grid>
     </Flex>
