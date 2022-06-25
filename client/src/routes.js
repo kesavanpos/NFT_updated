@@ -86,7 +86,7 @@ const dashRoutes = [
       },
       {
         name: "NFTMap",
-        path: "/dashboard/HomeMap",
+        path: "/dashboard/NFTMap",
         component: NFTMap,
         layout: "/admin",
       },

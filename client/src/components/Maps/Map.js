@@ -1,7 +1,7 @@
 import React from "react";
 import WorldMap from "react-svg-worldmap";
 
-function Maps() {
+function Maps({countryClick}) {
   const data = [
     { country: "cn", value: 1389618778 }, // china
     { country: "in", value: 1311559204 }, // india
@@ -22,6 +22,7 @@ function Maps() {
         title="Top 10 Populous Countries"
         value-suffix="people"
         size="lg"
+        onClickFunction={countryClick}
         data={data}
       />
     </div>
