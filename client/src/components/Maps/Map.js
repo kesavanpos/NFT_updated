@@ -21,7 +21,7 @@ function Maps({countryClick}) {
         color="red"
         title="Top 10 Populous Countries"
         value-suffix="people"
-        size="lg"
+        size="xl"
         onClickFunction={countryClick}
         data={data}
       />

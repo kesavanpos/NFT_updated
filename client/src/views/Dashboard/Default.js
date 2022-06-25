@@ -20,7 +20,8 @@ import {
   Thead,
   Tr,
   useColorModeValue,
-  Button
+  Button,
+  Center
 } from "@chakra-ui/react";
 // Custom components
 import Card from "../../components/Card/Card.js";
@@ -94,22 +95,43 @@ export default function Default() {
         <Card p="28px 10px 0px 0px" mb={{ sm: "26px", lg: "0px" }}>
           <CardHeader mb="20px" ps="22px">
             <Flex direction="column" alignSelf="flex-start">
-              <Text fontSize="lg" color={textColor} fontWeight="bold" mb="6px">
-                Block Chain Tech
-              </Text>
+              <Center><Text fontSize="62px" color={textColor} fontWeight="bold" mb="6px" className="font-league">
+              BLOCKCHAIN TECHNOLOGY
+              </Text></Center>
+              <Center>
               <Button
                     type='submit'
-                    bg='teal.300'
-                    w='50%'
+                    bg='teal.300'                  
                     p='8px 32px'
+                    mt={5}
                     mb={5}
                     _hover='teal.300'
                     color='white'
-                    fontSize='xs'
+                    fontSize='md'
                     onClick={() => { window.location.href="#/admin/dashboard/HomeMap"}}         
                     >
-                    Navigate Map
+                   Click here
                   </Button>
+                  </Center>
+                  <Text fontSize="md" color={textColor} fontWeight="normal" mb="6px">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+              </Text>
+              
+              <Center>
+              <Button
+                    type='submit'
+                    bg='blue.300'                    
+                    p='8px 32px'
+                    mb={5}
+                    mt={5}
+                    _hover='teal.300'
+                    color='white'
+                    fontSize='md'                        
+                    >
+                    Learn More
+                  </Button>
+              </Center>
+
             </Flex>
           </CardHeader>
           
