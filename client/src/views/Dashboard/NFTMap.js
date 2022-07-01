@@ -1,4 +1,4 @@
-import { default as Logo } from '../../assets/img/us.svg';
+import { default as Logo } from '../../assets/img/cut-us.svg';
 import { ReactSVG } from 'react-svg'
 
 const NFTMap = () =>{
