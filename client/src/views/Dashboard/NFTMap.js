@@ -79,27 +79,27 @@ const NFTMap = () =>{
     
   }
   
-  const downloadPng=() => {
-    var img = new Image();
-    img.onload = function (){
-   var canvas = document.createElement("canvas");
-   canvas.width = img.naturalWidth;
-   canvas.height = img.naturalHeight;
-   var ctxt = canvas.getContext("2d");
-   ctxt.fillStyle = "#fff";
-   ctxt.fillRect(0, 0, canvas.width, canvas.height);
-         ctxt.drawImage(img, 0, 0);
-   var a = document.createElement("a");
-   a.href = canvas.toDataURL("image/png");
-   a.download = "image.png"
-   document.body.appendChild(a);
-   a.click();
-   document.body.removeChild(a);
-    };
-    var innerSvg = document.querySelector("#div-surrounding-svg-element svg svg");
-    var svgText = (new XMLSerializer()).serializeToString(innerSvg);
-    img.src = "data:image/svg+xml;utf8," + encodeURIComponent(svgText);
- }
+//   const downloadPng=() => {
+//     var img = new Image();
+//     img.onload = function (){
+//    var canvas = document.createElement("canvas");
+//    canvas.width = img.naturalWidth;
+//    canvas.height = img.naturalHeight;
+//    var ctxt = canvas.getContext("2d");
+//    ctxt.fillStyle = "#fff";
+//    ctxt.fillRect(0, 0, canvas.width, canvas.height);
+//          ctxt.drawImage(img, 0, 0);
+//    var a = document.createElement("a");
+//    a.href = canvas.toDataURL("image/png");
+//    a.download = "image.png"
+//    document.body.appendChild(a);
+//    a.click();
+//    document.body.removeChild(a);
+//     };
+//     var innerSvg = document.querySelector("#div-surrounding-svg-element svg svg");
+//     var svgText = (new XMLSerializer()).serializeToString(innerSvg);
+//     img.src = "data:image/svg+xml;utf8," + encodeURIComponent(svgText);
+//  }
   
 
     return(
