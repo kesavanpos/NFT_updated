@@ -89,7 +89,7 @@ const NFTMap = () =>{
             top="14%"
             display={{ sm: "none", md: "block" }}
           >
-            <Globe />
+            <ReactSVG src={Logo}/>
           </Box>        
         </Grid>
         <Grid
