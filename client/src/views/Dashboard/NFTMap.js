@@ -56,14 +56,52 @@ import {
   } from "../../variables/charts";
 
   import { default as mintImg } from '../../assets/img/mint.jpg';
-  
- 
+  import $ from 'jquery';
  
 
+  $(function() {
+    $('path').on('click',function () {    
+      const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      var fill = "#" + randomColor;
+      $(this).css('fill', "#990000").css('stroke', "#990000");
+    });
+
+    
+  });
+
+ 
 const NFTMap = () =>{
     const iconTeal = useColorModeValue("teal.300", "teal.300");
   const iconBoxInside = useColorModeValue("white", "white");
   const textColor = useColorModeValue("gray.700", "white");
+
+  const selectSVG = (e) =>{
+    
+  }
+  
+  const downloadPng=() => {
+    var img = new Image();
+    img.onload = function (){
+   var canvas = document.createElement("canvas");
+   canvas.width = img.naturalWidth;
+   canvas.height = img.naturalHeight;
+   var ctxt = canvas.getContext("2d");
+   ctxt.fillStyle = "#fff";
+   ctxt.fillRect(0, 0, canvas.width, canvas.height);
+         ctxt.drawImage(img, 0, 0);
+   var a = document.createElement("a");
+   a.href = canvas.toDataURL("image/png");
+   a.download = "image.png"
+   document.body.appendChild(a);
+   a.click();
+   document.body.removeChild(a);
+    };
+    var innerSvg = document.querySelector("#div-surrounding-svg-element svg svg");
+    var svgText = (new XMLSerializer()).serializeToString(innerSvg);
+    img.src = "data:image/svg+xml;utf8," + encodeURIComponent(svgText);
+ }
+  
+
     return(
         <Flex flexDirection="column" pt={{ base: "120px", md: "75px" }} mt={'10px'}>
         <Text
@@ -89,7 +127,8 @@ const NFTMap = () =>{
             top="14%"
             display={{ sm: "none", md: "block" }}
           >
-            <ReactSVG src={Logo}/>
+            <ReactSVG             
+             src={Logo}/>
           </Box>        
         </Grid>
         <Grid
